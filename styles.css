@@ -1,0 +1,135 @@
+:root {
+    --bg-color: #F4F2EB;
+    --primary-teal: #126A66;
+    --text-dark: #2D2D2D;
+    --shadow-light: #ffffff;
+    --shadow-dark: #d6d3c9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-teal);
+    margin-bottom: 0.5rem;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.tool-card {
+    background: var(--bg-color);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 8px 8px 16px var(--shadow-dark), 
+                -8px -8px 16px var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transform-style: preserve-3d; 
+}
+
+.tool-card h2, .tool-card p, .tool-card .action-btn {
+    transform: translateZ(30px);
+}
+
+.tool-card h2 {
+    color: var(--primary-teal);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    background: var(--bg-color);
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: inset 4px 4px 8px var(--shadow-dark), 
+                inset -4px -4px 8px var(--shadow-light);
+    transition: 0.2s;
+    font-size: 0.9rem;
+}
+
+.custom-file-upload:hover {
+    color: var(--primary-teal);
+}
+
+input[type="text"] {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: var(--bg-color);
+    box-shadow: inset 4px 4px 8px var(--shadow-dark), 
+                inset -4px -4px 8px var(--shadow-light);
+    color: var(--text-dark);
+    outline: none;
+}
+
+.file-count {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #666;
+}
+
+.action-btn {
+    background-color: var(--primary-teal);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(18, 106, 102, 0.4);
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px) translateZ(30px);
+    box-shadow: 6px 6px 15px rgba(18, 106, 102, 0.5);
+}
+
+.status-message {
+    font-size: 0.85rem;
+    color: var(--primary-teal);
+    font-weight: bold;
+    text-align: center;
+    min-height: 1.2em;
+}

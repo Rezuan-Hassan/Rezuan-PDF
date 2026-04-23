@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezuan PDF - 100% Secure Offline Tools</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Rezuan PDF</h1>
+        <p>100% Free, Secure, and Private. Files never leave your device.</p>
+    </header>
+
+    <main class="dashboard">
+        <div class="tool-card tilt-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+            <h2>Merge PDF</h2>
+            <p>Combine multiple PDFs into a single document.</p>
+            <div class="input-group">
+                <label for="merge-upload" class="custom-file-upload">Choose Multiple PDFs</label>
+                <input type="file" id="merge-upload" multiple accept="application/pdf">
+                <span id="merge-count" class="file-count">0 files selected</span>
+            </div>
+            <div class="input-group">
+                <input type="text" id="merge-filename" placeholder="New file name (optional)">
+            </div>
+            <button id="merge-btn" class="action-btn">Merge & Download</button>
+            <p id="merge-status" class="status-message"></p>
+        </div>
+
+        <div class="tool-card tilt-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+            <h2>Rotate PDF</h2>
+            <p>Rotate all pages 90 degrees clockwise.</p>
+            <div class="input-group">
+                <label for="rotate-upload" class="custom-file-upload">Choose 1 PDF</label>
+                <input type="file" id="rotate-upload" accept="application/pdf">
+                <span id="rotate-count" class="file-count">0 files selected</span>
+            </div>
+            <div class="input-group">
+                <input type="text" id="rotate-filename" placeholder="New file name (optional)">
+            </div>
+            <button id="rotate-btn" class="action-btn">Rotate & Download</button>
+            <p id="rotate-status" class="status-message"></p>
+        </div>
+
+        <div class="tool-card tilt-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+            <h2>Add Watermark</h2>
+            <p>Stamp custom text across all pages.</p>
+            <div class="input-group">
+                <label for="watermark-upload" class="custom-file-upload">Choose 1 PDF</label>
+                <input type="file" id="watermark-upload" accept="application/pdf">
+                <span id="watermark-count" class="file-count">0 files selected</span>
+            </div>
+            <div class="input-group">
+                <input type="text" id="watermark-text" placeholder="Text (e.g., CONFIDENTIAL)">
+            </div>
+            <div class="input-group">
+                <input type="text" id="watermark-filename" placeholder="New file name (optional)">
+            </div>
+            <button id="watermark-btn" class="action-btn">Stamp & Download</button>
+            <p id="watermark-status" class="status-message"></p>
+        </div>
+
+        <div class="tool-card tilt-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+            <h2>Page Numbers</h2>
+            <p>Add sequential numbers to the bottom.</p>
+            <div class="input-group">
+                <label for="number-upload" class="custom-file-upload">Choose 1 PDF</label>
+                <input type="file" id="number-upload" accept="application/pdf">
+                <span id="number-count" class="file-count">0 files selected</span>
+            </div>
+            <div class="input-group">
+                <input type="text" id="number-filename" placeholder="New file name (optional)">
+            </div>
+            <button id="number-btn" class="action-btn">Number & Download</button>
+            <p id="number-status" class="status-message"></p>
+        </div>
+
+        <div class="tool-card tilt-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+            <h2>Remove Pages</h2>
+            <p>Delete unwanted pages from your document.</p>
+            <div class="input-group">
+                <label for="remove-upload" class="custom-file-upload">Choose 1 PDF</label>
+                <input type="file" id="remove-upload" accept="application/pdf">
+                <span id="remove-count" class="file-count">0 files selected</span>
+            </div>
+            <div class="input-group">
+                <input type="text" id="remove-pages" placeholder="Pages to remove (e.g., 1, 3, 5)">
+            </div>
+            <div class="input-group">
+                <input type="text" id="remove-filename" placeholder="New file name (optional)">
+            </div>
+            <button id="remove-btn" class="action-btn">Remove & Download</button>
+            <p id="remove-status" class="status-message"></p>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
